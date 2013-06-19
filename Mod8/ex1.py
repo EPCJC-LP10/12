@@ -1,0 +1,6 @@
+nome = raw_input ("Como te chamas?")
+idade = input ("Qual a tua idade?")
+f = open ("nome.txt ","w")
+f.write ("nome:" + nome + "\n")
+f.write ("idade:" + str (idade))
+f.close ()
