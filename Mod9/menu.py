@@ -4,7 +4,7 @@ def principal():
     print
     print " **** MENU ****** "
     print
-    print "   1. Gestão de Alunos"
+    print "   1. Gestão de Frota"
     print "   2. Registar Presença (não implementado)"
     print 
     print "   0. Sair"
@@ -14,15 +14,15 @@ def principal():
     return op
 
 
-def alunos():
+def frota():
     print
-    print " *** Menu Alunos **** "
+    print " *** Menu Frota **** "
     print
-    print "1. Inserir novo aluno"
-    print "2. Listar todos alunos"
-    print "3. Pesquisar aluno"
-    print "4. Alterar dados de um aluno"
-    print "5. Eliminar aluno"
+    print "1. Inserir novo veiculo"
+    print "2. Listar todos veiculos"
+    print "3. Pesquisar veiculos"
+    print "4. Alterar dados de um veiculos"
+    print "5. Eliminar veiculos"
     print 
     print "0. Menu Anterior"
 

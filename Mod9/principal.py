@@ -1,21 +1,21 @@
 # -*- coding: utf-8 -*-
 
 import menu
-import alunos
+import frota
 import util
 
 
 # nome dos ficheiros
-fxAlunos = "fxAlunos.dat"
+fxfrota = "fxfrota.dat"
 
 def ler_ficheiros():
 	# adicionar todos ficheiros a ler
-	alunos.listaAlunos = util.ler_ficheiro(fxAlunos)
+	frota.listaVeiculos = util.ler_ficheiro(fxfrota)
 
 
 def escrever_ficheiros():
 	# adicionar todos ficheiros a guardar
-	util.escrever_ficheiro(fxAlunos, alunos.listaAlunos)
+	util.escrever_ficheiro(fxfrota, frota.listaVeiculos)
 
 
 
@@ -28,7 +28,7 @@ while not terminar:
     op = menu.principal()
     
     if op == '1':
-        alunos.gerir()
+        frota.gerir()
     elif op == '2':
         pass    #por fazer
     elif op == '0':
