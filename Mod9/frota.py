@@ -39,7 +39,7 @@ def inserir():
     listaVeiculos.append(registo)
 
 
-def pesquisar_aluno():
+def pesquisar():
     matricula = input("Qual o matricula do veiculo a pesquisar? ")
 
     pos = encontrar_posicao(matricula)
@@ -61,8 +61,8 @@ def listar():
         
   
 
-def eliminar_aluno():
-    cod = input ("matricula do veiculo a eliminar --> ")
+def eliminar():
+    matricula = input ("matricula do veiculo a eliminar --> ")
     pos = encontrar_posicao(matricula)
 
     if pos == -1:
@@ -74,16 +74,16 @@ def eliminar_aluno():
 
 
     
-def alterar_():
-    cod = input ("matriclula do veiculo a alterar --> ")
+def alterar():
+    matricula = input ("matriclula do veiculo a alterar --> ")
     pos = encontrar_posicao(matricula)
 
     if pos == -1:
-        print "Não existe aluno com esse código"
+        print "Não existe veiculo com esse matricula"
         return
 
     # só altera o nome
-    novonome = raw_input("Qual o nome? ")
+    novonome = raw_input("Qual a marca? ")
     listaVeiculos[pos] = listaVeiculos[pos]._replace(nome=novonome)
 
 
