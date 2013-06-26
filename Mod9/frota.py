@@ -21,7 +21,7 @@ def encontrar_posicao(matricula):
 
 
 def inserir():
-    matricula = raw_input("Qual o Matricula? ")
+    matricula = raw_input("Qual a Matricula? ")
 
     pos = encontrar_posicao(matricula)
 
@@ -30,9 +30,9 @@ def inserir():
         return
 
     #ler dados
-    marca = raw_input("Qual o Marca? ")
+    marca = raw_input("Qual a Marca? ")
     volume = raw_input("Qual o volume de carga? ")
-    custo100 = raw_input("Qual o custo por 100Kms ")
+    custo100 = raw_input("Qual o custo por 100Kms? ")
     requisitado  = "N"
     
     registo = veiculoReg(matricula, marca, volume, custo100, requisitado)
@@ -40,7 +40,7 @@ def inserir():
 
 
 def pesquisar():
-    matricula = input("Qual o matricula do veiculo a pesquisar? ")
+    matricula = raw_input("Qual a matricula do veiculo a pesquisar? ")
 
     pos = encontrar_posicao(matricula)
 
@@ -62,7 +62,7 @@ def listar():
   
 
 def eliminar():
-    matricula = input ("matricula do veiculo a eliminar --> ")
+    matricula = raw_input ("matricula do veiculo a eliminar --> ")
     pos = encontrar_posicao(matricula)
 
     if pos == -1:

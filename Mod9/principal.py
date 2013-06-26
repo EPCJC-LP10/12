@@ -3,20 +3,23 @@
 import menu
 import frota
 import util
+import clientes
 
 
 # nome dos ficheiros
 fxfrota = "fxfrota.dat"
+fxClientes = "clientes.dat"
 
 def ler_ficheiros():
-	# adicionar todos ficheiros a ler
-	frota.listaVeiculos = util.ler_ficheiro(fxfrota)
+    # adicionar todos ficheiros a ler
+    frota.listaVeiculos = util.ler_ficheiro(fxfrota)
+    clientes.listaClientes = util.ler_ficheiro(fxClientes)
 
 
 def escrever_ficheiros():
-	# adicionar todos ficheiros a guardar
-	util.escrever_ficheiro(fxfrota, frota.listaVeiculos)
-
+    # adicionar todos ficheiros a guardar
+    util.escrever_ficheiro(fxfrota, clientes.listaClientes)
+    util.escrever_ficheiro(fxClientes, clientes.listaClientes)
 
 
 # Bloco Principal
@@ -29,8 +32,9 @@ while not terminar:
     
     if op == '1':
         frota.gerir()
-    elif op == '2':
-        pass    #por fazer
+    if op == '2':
+        clientes.gerir()
+    
     elif op == '0':
         terminar = True
 
